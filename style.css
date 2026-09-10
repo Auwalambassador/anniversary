@@ -1,1 +1,898 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #080611;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 7%;
+
+    background: rgba(8, 6, 17, 0.75);
+    backdrop-filter: blur(15px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #ff7eb3;
+}
+
+.music-btn {
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.06);
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 150px 8% 80px;
+
+    position: relative;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 72, 137, 0.15), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(117, 73, 255, 0.16), transparent 35%);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.small-title,
+.section-label {
+    color: #ff7eb3;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3rem, 7vw, 6.5rem);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #ff7eb3,
+        #ffb3d1,
+        #b89cff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    color: #aaa6b9;
+
+    line-height: 1.9;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: linear-gradient(
+        135deg,
+        #ff4f91,
+        #9d6cff
+    );
+
+    color: white;
+
+    box-shadow: 0 10px 30px rgba(255, 79, 145, 0.25);
+}
+
+.primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 40px rgba(255, 79, 145, 0.4);
+}
+
+.secondary {
+    background: rgba(255,255,255,0.06);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.secondary:hover {
+    background: rgba(255,255,255,0.12);
+
+    transform: translateY(-4px);
+}
+
+
+/* HERO CARD */
+
+.hero-card {
+    width: 330px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+
+    animation: floating 5s ease-in-out infinite;
+}
+
+.heart-icon {
+    font-size: 4rem;
+
+    margin-bottom: 20px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.hero-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 15px;
+}
+
+.hero-card p {
+    color: #aaa6b9;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.mini-line {
+    width: 50px;
+    height: 2px;
+
+    background: #ff7eb3;
+
+    margin: 20px auto;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 120px 8%;
+}
+
+.section-heading {
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    color: #aaa6b9;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter-section {
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.025);
+}
+
+.counter-section h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 45px;
+}
+
+.counter {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.counter-box {
+    min-width: 130px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.counter-box span {
+    display: block;
+
+    font-size: 2.4rem;
+
+    font-weight: 700;
+
+    background: linear-gradient(
+        135deg,
+        #ff7eb3,
+        #a78bfa
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.counter-box small {
+    color: #aaa6b9;
+}
+
+
+/* =========================
+   STORY CARDS
+========================= */
+
+.story-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.story-card {
+    padding: 40px 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+
+    background: rgba(255,255,255,0.07);
+}
+
+.story-card .icon {
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+.story-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 12px;
+}
+
+.story-card p {
+    color: #aaa6b9;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   WISH
+========================= */
+
+.wishes {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 72, 137, 0.08),
+            transparent 50%
+        );
+}
+
+.wish-container {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.wish-card {
+    position: relative;
+
+    padding: 60px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+}
+
+.quote {
+    font-family: Georgia, serif;
+
+    font-size: 6rem;
+
+    color: #ff7eb3;
+
+    height: 50px;
+}
+
+.wish-card p {
+    color: #d2ceda;
+
+    line-height: 2;
+
+    font-size: 1.05rem;
+}
+
+.signature {
+    margin-top: 30px;
+
+    color: #ff9fc5;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.photo-card {
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.photo-placeholder {
+    height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 4rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,126,179,0.12),
+            rgba(157,108,255,0.12)
+        );
+}
+
+.photo-card span {
+    display: block;
+
+    padding: 15px;
+
+    text-align: center;
+
+    color: #bbb;
+}
+
+
+/* =========================
+   SURPRISE
+========================= */
+
+.surprise {
+    text-align: center;
+}
+
+.surprise-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,79,145,0.1),
+            rgba(157,108,255,0.1)
+        );
+
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.surprise-box h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+}
+
+.surprise-box p {
+    color: #aaa6b9;
+
+    margin-bottom: 30px;
+}
+
+.big-btn {
+    padding: 17px 35px;
+
+    font-size: 1rem;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,0.8);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 2000;
+}
+
+.modal.active {
+    display: flex;
+
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+
+    max-width: 550px;
+
+    width: 100%;
+
+    padding: 50px 40px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background: #151222;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow: 0 30px 100px rgba(0,0,0,0.6);
+
+    animation: modalUp 0.4s ease;
+}
+
+.close {
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+.modal-heart {
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: #bbb6c7;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+footer h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa6b9;
+
+    margin-bottom: 20px;
+}
+
+footer small {
+    color: #777;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+
+    bottom: -50px;
+
+    animation: floatHeart linear forwards;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 130px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 100%;
+
+        max-width: 380px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .music-btn {
+        padding: 8px 12px;
+
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .counter-box {
+        min-width: 110px;
+    }
+
+    .wish-card {
+        padding: 35px 22px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .surprise-box h2 {
+        font-size: 2.2rem;
+    }
+}
