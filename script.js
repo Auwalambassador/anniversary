@@ -19,7 +19,7 @@
    December = 11
 */
 
-const friendshipDate = new Date(2026, 8, 10);
+const friendshipDate = new Date(2026, 7, 10);
 
 
 /* =========================
