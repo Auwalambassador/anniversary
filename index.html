@@ -1,1 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Our Friendship Anniversary ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">Forever Us ❤️</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#story">Our Story</a>
+            <a href="#wishes">Wishes</a>
+            <a href="#gallery">Memories</a>
+        </nav>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            🎵 Music
+        </button>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">A SPECIAL DAY FOR US</p>
+
+            <h1>
+                Happy Friendship
+                <span>Anniversary ❤️</span>
+            </h1>
+
+            <p class="hero-text">
+                Some people come into our lives for a moment,
+                but some become a beautiful part of our story.
+                I'm grateful that our friendship became one of mine.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#wishes" class="btn primary">
+                    💌 Read My Wishes
+                </a>
+
+                <button class="btn secondary" onclick="openMessage()">
+                    ✨ Open My Message
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="heart-icon">❤️</div>
+
+            <h3>Our Friendship</h3>
+
+            <p>
+                Built on laughter, trust,
+                unforgettable moments
+                and countless conversations.
+            </p>
+
+            <div class="mini-line"></div>
+
+            <strong>Forever grateful.</strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- COUNTER -->
+    <section class="counter-section">
+
+        <p class="section-label">OUR JOURNEY</p>
+
+        <h2>Time Since Our Friendship Began</h2>
+
+        <div class="counter">
+
+            <div class="counter-box">
+                <span id="years">0</span>
+                <small>Years</small>
+            </div>
+
+            <div class="counter-box">
+                <span id="months">0</span>
+                <small>Months</small>
+            </div>
+
+            <div class="counter-box">
+                <span id="days">0</span>
+                <small>Days</small>
+            </div>
+
+            <div class="counter-box">
+                <span id="hours">0</span>
+                <small>Hours</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section id="story" class="story section">
+
+        <div class="section-heading">
+            <p class="section-label">OUR STORY</p>
+
+            <h2>A Friendship Worth Celebrating</h2>
+
+            <p>
+                Not every friendship needs years to become special.
+                Sometimes, it's the conversations, the laughter,
+                the support and the little moments that make it unforgettable.
+            </p>
+        </div>
+
+
+        <div class="story-grid">
+
+            <div class="story-card">
+                <div class="icon">🤝</div>
+
+                <h3>Trust</h3>
+
+                <p>
+                    A friendship becomes beautiful when
+                    two people can trust and understand each other.
+                </p>
+            </div>
+
+
+            <div class="story-card">
+                <div class="icon">😂</div>
+
+                <h3>Laughter</h3>
+
+                <p>
+                    From random conversations to crazy jokes,
+                    some memories are impossible to forget.
+                </p>
+            </div>
+
+
+            <div class="story-card">
+                <div class="icon">❤️</div>
+
+                <h3>Memories</h3>
+
+                <p>
+                    The little moments we shared are what
+                    make this friendship worth celebrating.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WISHES -->
+    <section id="wishes" class="wishes section">
+
+        <div class="section-heading">
+
+            <p class="section-label">MY WISH FOR YOU</p>
+
+            <h2>Happy Friendship Anniversary ❤️</h2>
+
+        </div>
+
+
+        <div class="wish-container">
+
+            <div class="wish-card">
+
+                <div class="quote">“</div>
+
+                <p>
+                    On this special day, I just want you to know
+                    how grateful I am for having you in my life.
+
+                    <br><br>
+
+                    May our friendship continue to grow stronger,
+                    may we create more beautiful memories,
+                    laugh over the craziest things,
+                    support each other through difficult days
+                    and always have reasons to smile.
+
+                    <br><br>
+
+                    No matter where life takes us,
+                    I hope this friendship remains one of
+                    those beautiful chapters we will always remember.
+
+                    <br><br>
+
+                    Happy Friendship Anniversary to us. ❤️
+                </p>
+
+                <div class="signature">
+                    — From someone who truly values you ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery section">
+
+        <div class="section-heading">
+
+            <p class="section-label">OUR MEMORIES</p>
+
+            <h2>Moments We Should Never Forget</h2>
+
+            <p>
+                Replace these placeholders with your favorite pictures together.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="photo-card">
+                <div class="photo-placeholder">📸</div>
+                <span>Memory One</span>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-placeholder">💕</div>
+                <span>Memory Two</span>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-placeholder">✨</div>
+                <span>Memory Three</span>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-placeholder">🥹</div>
+                <span>Memory Four</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL SURPRISE -->
+    <section class="surprise section">
+
+        <div class="surprise-box">
+
+            <p class="section-label">ONE LAST THING...</p>
+
+            <h2>I Have Something For You 🎁</h2>
+
+            <p>
+                There's a little message waiting behind this button.
+            </p>
+
+            <button class="btn primary big-btn" onclick="openSurprise()">
+                🎁 Open Surprise
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Forever Us ❤️</h3>
+
+        <p>
+            One friendship. Countless memories.
+            A story worth keeping.
+        </p>
+
+        <small>
+            Made with ❤️ for a beautiful friendship.
+        </small>
+
+    </footer>
+
+
+    <!-- MESSAGE MODAL -->
+    <div id="messageModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeMessage()">×</button>
+
+            <div class="modal-heart">💌</div>
+
+            <h2>A Message For You</h2>
+
+            <p>
+                Thank you for being part of my journey.
+
+                <br><br>
+
+                Thank you for the conversations,
+                the jokes, the random moments,
+                the support and everything in between.
+
+                <br><br>
+
+                Some friendships are simply too special
+                to be taken for granted.
+
+                <br><br>
+
+                I'm genuinely happy that I met you.
+
+                ❤️
+            </p>
+
+            <button class="btn primary" onclick="closeMessage()">
+                Keep Smiling 😊
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SURPRISE MODAL -->
+    <div id="surpriseModal" class="modal">
+
+        <div class="modal-content surprise-modal">
+
+            <button class="close" onclick="closeSurprise()">×</button>
+
+            <div class="modal-heart">🎉</div>
+
+            <h2>Surprise! ❤️</h2>
+
+            <p>
+                If friendship were measured in memories,
+                we'd already be rich.
+
+                <br><br>
+
+                If friendship were measured in laughter,
+                we'd probably be unstoppable.
+
+                <br><br>
+
+                And if friendship were measured by how much
+                someone appreciates you...
+
+                <br><br>
+
+                <strong>
+                    You'd know exactly how special you are. ❤️
+                </strong>
+            </p>
+
+            <button class="btn primary" onclick="createHearts()">
+                ❤️ One More Hug
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
